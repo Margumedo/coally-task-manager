@@ -1,5 +1,11 @@
 const swaggerJsdoc = require('swagger-jsdoc');
 
+
+const isProduction = process.env.NODE_ENV === 'production';
+const serverUrl = isProduction
+    ? 'https://coally-task-manager.onrender.com/' // URL de producción
+    : 'http://localhost:4000'; // URL de desarrollo
+
 const options = {
     definition: {
         openapi: '3.0.0',
@@ -27,14 +33,11 @@ const options = {
         },
         servers: [
             {
-                url: 'http://localhost:4000/',
-                description: 'Servidor local de desarrollo'
+                url: serverUrl,
+                description: isProduction
+                    ? 'Servidor de Producción'
+                    : 'Servidor de Desarrollo'
             },
-            {
-                url: 'https://coally-task-manager.onrender.com',
-                description: 'Servidor de Producción'
-            },
-
         ],
         components: {
             securitySchemes: {
