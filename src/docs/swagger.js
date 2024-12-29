@@ -29,7 +29,12 @@ const options = {
             {
                 url: 'http://localhost:4000/',
                 description: 'Servidor local de desarrollo'
-            }
+            },
+            {
+                url: 'https://coally-task-manager.onrender.com',
+                description: 'Servidor de Producción'
+            },
+
         ],
         components: {
             securitySchemes: {

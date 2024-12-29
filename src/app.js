@@ -1,6 +1,6 @@
 
 const express = require('express');
-// const cors = require('cors'); // Solo si requieres CORS, de lo contrario se omite
+const cors = require('cors');
 const swaggerUi = require('swagger-ui-express');
 const swaggerSpecs = require('./docs/swagger');
 const routes = require('./routes/index');
@@ -15,7 +15,11 @@ app.get('/', (req, res) => {
 // Middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-// app.use(cors()); // Habilita si requieres peticiones desde otros dominios
+app.use(cors({
+    origin: '*', // Permitir todas las solicitudes
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Métodos permitidos
+    allowedHeaders: ['Content-Type', 'Authorization'] // Cabeceras permitidas
+}));
 
 // Swagger
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpecs));
