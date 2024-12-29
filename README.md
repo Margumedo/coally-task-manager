@@ -41,7 +41,7 @@ Puedes ir directamente a la aplicación desplega mediente el siguente link: http
 
 Antes de comenzar, asegúrate de tener instalados los siguientes programas:
 
-- **Node.js** (versión >= 14)
+- **Node.js** (versión >= 20)
 - **MongoDB** (local o en la nube)
 - **Git**
 
@@ -69,6 +69,7 @@ npm install
 PORT=4000
 MONGODB_URI=mongodb://<usuario>:<contraseña>@localhost:27017/taskmanagerdb
 JWT_SECRET=superSecretKey123
+SALT=10
 ```
 
 4️⃣ Inicia el servidor
