@@ -1,0 +1,32 @@
+# Node.js dependencies
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor and OS files
+.DS_Store
+.vscode/
+*.swp
+
+# Coverage reports
+coverage/
+
+# Production builds (if applicable)
+dist/
+
+# Swagger generated files (optional)
+*.swagger.json
+*.swagger.yaml
+
+# Docker files
+docker-compose.override.yml
+
+# Ignore any other files as needed
