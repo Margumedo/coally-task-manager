@@ -145,7 +145,7 @@ Sin embargo al visitar la raiz te redirigira a la documentación.
 
 <div align="center">
 ---
-💻 Con ❤️ por Maicol Arguemdo 🧑🏻‍💻
+💻 Con ❤️ por Maicol Argumedo 🧑🏻‍💻
 ---
 </div> 
 
