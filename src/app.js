@@ -16,9 +16,10 @@ app.get('/', (req, res) => {
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({
-    origin: '*', // Permitir todas las solicitudes
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Métodos permitidos
-    allowedHeaders: ['Content-Type', 'Authorization'] // Cabeceras permitidas
+    origin: ['http://localhost:4000', 'https://coally-task-manager.onrender.com'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Métodos permitidos
+    allowedHeaders: ['Content-Type', 'Authorization'], // Cabeceras permitidas
+    // credentials: true
 }));
 
 // Swagger
